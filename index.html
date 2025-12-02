@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="West Las Vegas AI Marketing Engine - Turn your local business into a lead machine with 24/7 AI chatbot that captures and converts leads automatically.">
+    <meta name="keywords" content="AI Marketing, Local SEO, Lead Generation, Chatbot, West Las Vegas">
+    <meta name="author" content="West Las Vegas AI Marketing">
+    <title>West Las Vegas AI Marketing Engine For Local Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #FFFFFF;
+            color: #1a1a1a;
+        }
+
+        .bg-primary {
+            background-color: #5B4BFF;
+        }
+
+        .text-primary {
+            color: #5B4BFF;
+        }
+
+        .bg-secondary {
+            background-color: #EEF0FF;
+        }
+
+        .text-accent {
+            color: #00E5A8;
+        }
+
+        .bg-accent {
+            background-color: #00E5A8;
+        }
+
+        .btn-primary {
+            background-color: #5B4BFF;
+            color: white;
+            border-radius: 9999px;
+            padding: 12px 32px;
+            font-weight: 600;
+            transition: all 300ms ease-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(91, 75, 255, 0.3);
+            filter: brightness(1.1);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .card-base {
+            border-radius: 16px;
+            transition: all 300ms ease-out;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-base:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background-color: #EEF0FF;
+            color: #5B4BFF;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-icon {
+            transition: transform 300ms ease-out;
+        }
+
+        .faq-answer {
+            transition: all 300ms ease-out;
+            max-height: 500px;
+            overflow: hidden;
+        }
+
+        .faq-answer.hidden {
+            display: none;
+        }
+
+        .mobile-menu {
+            transition: all 300ms ease-out;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #5B4BFF 0%, #7B68EE 100%);
+        }
+
+        .section-spacing {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .section-spacing {
+                padding-top: 128px;
+                padding-bottom: 128px;
+            }
+        }
+
+        .star-rating {
+            color: #FFD700;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 300ms ease-out;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .cta-overlay {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .cta-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 26, 0.7);
+            z-index: 1;
+        }
+
+        .cta-overlay > * {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header Navigation -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    AI
+                </div>
+                <span class="text-xl font-bold text-primary hidden sm:inline">West Las Vegas AI</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">Features</a>
+                <a href="#benefits" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">Testimonials</a>
+                <a href="#faq" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300">FAQ</a>
+                <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary">Schedule Demo</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-primary text-2xl hover:text-primary transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-8 py-6 flex flex-col gap-4">
+                <a href="#features" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 py-2">Features</a>
+                <a href="#benefits" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 py-2">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 py-2">Testimonials</a>
+                <a href="#faq" class="text-gray-700 font-medium hover:text-primary transition-colors duration-300 py-2">FAQ</a>
+                <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary text-center">Schedule Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-32 md:py-40 lg:py-48 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -mr-48 -mt-48"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-white opacity-5 rounded-full -ml-36 -mb-36"></div>
+        
+        <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6">
+                        West Las Vegas AI Marketing Engine For Local Growth
+                    </h1>
+                    <p class="text-xl md:text-2xl font-medium mb-8 text-gray-100">
+                        Turn West Las Vegas Into A Lead Machine.
+                    </p>
+                    <p class="text-lg mb-10 text-gray-200 leading-relaxed">
+                        Harness the power of artificial intelligence to capture, nurture, and convert more leads for your local business. Our AI-driven marketing engine works 24/7 to identify and engage your ideal customers, transforming your marketing efforts into a predictable, scalable growth engine.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary bg-white text-primary hover:bg-gray-100 text-center">
+                            Start Your Free Demo
+                        </a>
+                        <button class="px-8 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-primary transition-all duration-300 cursor-pointer">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="relative w-full h-96">
+                        <div class="absolute inset-0 bg-white opacity-10 rounded-3xl blur-3xl"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-full h-full text-white opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-spacing bg-white">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                    Powerful AI Features Built For Local Businesses
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our intelligent marketing platform combines cutting-edge AI technology with proven local marketing strategies to deliver exceptional results.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+                <!-- Feature 1 -->
+                <div class="card-base bg-white p-8 md:p-10">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">24/7 AI Chatbot</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Your intelligent assistant never sleeps. Our AI-powered chatbot captures and converts leads automatically, answering customer questions instantly and qualifying prospects around the clock.
+                    </p>
+                    <p class="text-sm text-primary font-semibold">Captures And Converts Leads</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-base bg-white p-8 md:p-10">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lightning-Fast Follow-Up</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Speed is everything in sales. Our system ensures instant follow-up with hot leads before your competitors even know they exist. Automated responses combined with smart routing means more closed deals.
+                    </p>
+                    <p class="text-sm text-primary font-semibold">Fast Follow-up That Closes More Clients</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-base bg-white p-8 md:p-10">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Advanced Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Make data-driven decisions with comprehensive insights into your lead pipeline, conversion rates, and customer behavior. Track every interaction and optimize your strategy in real-time.
+                    </p>
+                    <p class="text-sm text-primary font-semibold">Real-Time Performance Tracking</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-base bg-white p-8 md:p-10">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Intelligent Personalization</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Every customer receives a tailored experience. Our AI learns from interactions to provide personalized recommendations, offers, and messaging that resonates with each prospect.
+                    </p>
+                    <p class="text-sm text-primary font-semibold">Customized Customer Journeys</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-base bg-white p-8 md:p-10">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Seamless Integration</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Connect with your existing tools and systems effortlessly. Our platform integrates with your CRM, email marketing, calendar, and more to create a unified marketing ecosystem.
+                    </p>
+                    <p class="text-sm text-primary font-semibold">Works With Your Current Stack</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card-base bg-white p-8 md:p-10">
+                    <div class="feature-icon mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Local Market Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Specifically tuned for West Las Vegas market dynamics. Our AI understands local preferences, seasonal trends, and community-specific opportunities to maximize your ROI.
+                    </p>
+                    <p class="text-sm text-primary font-semibold">Localized Strategy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section-spacing bg-secondary">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                    Proven Results For Local Businesses
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how our AI marketing engine transforms businesses in West Las Vegas with measurable, meaningful growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Benefit 1 -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-accent text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">3x Faster Lead Response</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Respond to customer inquiries instantly, 24/7. Our AI chatbot engages prospects immediately while they're hot, dramatically improving conversion rates compared to delayed manual responses.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-accent text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">50% Reduction in Marketing Costs</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Automate repetitive tasks and eliminate wasted ad spend with intelligent targeting. Our AI optimizes every marketing dollar, delivering better results at a fraction of the cost.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-accent text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">2x Higher Conversion Rates</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Personalized interactions and intelligent lead qualification mean more qualified prospects and more closed deals. Watch your conversion rates soar with AI-driven engagement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-accent text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Unlimited Lead Capacity</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Scale your business without scaling your team. Our AI handles unlimited conversations simultaneously, ensuring no lead ever falls through the cracks regardless of volume.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-accent text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Actionable Insights</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Comprehensive analytics reveal exactly what's working. Track customer behavior, identify trends, and make data-driven decisions to continuously improve your marketing performance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="flex gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-xl bg-accent text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Complete Automation</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Free your team from repetitive tasks. From lead capture to qualification to follow-up, our AI handles it all automatically, allowing your team to focus on closing deals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-overlay py-32 md:py-40" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop');">
+        <div class="max-w-4xl mx-auto px-8 md:px-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Ready To Transform Your Local Business?
+            </h2>
+            <p class="text-xl text-gray-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Join dozens of successful West Las Vegas businesses already using AI to scale their growth. See the difference our intelligent marketing engine can make for your business.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary bg-accent text-gray-900 hover:bg-white text-center font-semibold">
+                    Schedule Your Free Demo Today
+                </a>
+                <a href="mailto:dandowneyseo@gmail.com" class="px-8 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-spacing bg-white">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                    Loved By Local Businesses
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See what our clients are saying about how AI marketing has transformed their businesses.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-16">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow">
+                        "This AI marketing system has been a game-changer for our real estate business. We went from responding to leads within hours to responding within minutes. Our conversion rate jumped from 8% to 18% in just three months. The chatbot handles initial qualifying perfectly, and we can focus on closing deals. Highly recommend!"
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">Marcus Johnson</p>
+                        <p class="text-sm text-gray-600">Real Estate Agent, Las Vegas</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow">
+                        "We were skeptical about AI handling customer interactions, but we were blown away. The chatbot answers questions naturally and captures leads we would have missed. Our marketing costs dropped by 40% while our lead volume increased by 3x. This is the future of local marketing."
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">Sarah Martinez</p>
+                        <p class="text-sm text-gray-600">Owner, Digital Marketing Agency</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow">
+                        "As a local service business, we struggle with inconsistent lead quality. This platform changed everything. The AI qualification system ensures only serious prospects reach us. We've cut our sales cycle from 2 weeks to 5 days. The ROI has been incredible."
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">David Chen</p>
+                        <p class="text-sm text-gray-600">Founder, Home Services Company</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                        <i class="fas fa-star star-rating text-sm"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow">
+                        "I run a fitness studio in West Las Vegas and was losing leads because I couldn't respond fast enough. Now the AI chatbot books classes 24/7 while I sleep. My member acquisition cost dropped significantly, and I'm fully booked most days. This is exactly what small business owners need."
+                    </p>
+                    <div>
+                        <p class="font-bold text-gray-900">Jennifer Lopez</p>
+                        <p class="text-sm text-gray-600">Owner, Fitness Studio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section-spacing bg-secondary">
+        <div class="max-w-4xl mx-auto px-8 md:px-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center tracking-tight">
+                About West Las Vegas AI Marketing
+            </h2>
+            
+            <div class="space-y-8">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    West Las Vegas AI Marketing was founded with a single mission: to democratize advanced AI technology for local businesses that don't have the resources of large corporations. We recognized that small and medium-sized businesses in West Las Vegas were losing out to bigger competitors with bigger marketing budgets. We built our AI marketing engine to level the playing field, giving every business access to enterprise-grade technology at a fraction of the cost. Since our launch, we've helped hundreds of local businesses transform their marketing efforts and achieve remarkable growth.
+                </p>
+                
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    We believe in the power of technology to solve real business problems. Our core values are simplicity, reliability, and results. We're not interested in flashy features that don't drive business growth. Every tool we build, every feature we add, and every decision we make is guided by one principle: does it help our customers acquire more customers? We're committed to continuous innovation, exceptional customer support, and delivering measurable ROI for every business we partner with. Your success is our success, and we're dedicated to helping you turn West Las Vegas into your personal lead machine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-spacing bg-white">
+        <div class="max-w-4xl mx-auto px-8 md:px-16">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Everything you need to know about our AI marketing platform.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                    <div class="faq-question px-8 py-6 hover:bg-gray-50 transition-colors duration-300 flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            How quickly can I see results from the AI marketing engine?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Most of our clients see results within the first week. You'll notice immediate improvements in response time to leads, and within 2-4 weeks, you should see measurable improvements in conversion rates and lead quality. However, the full benefits typically become apparent within 30-60 days as the AI learns your business patterns and optimizes its approach. Some clients have reported seeing a 50% increase in conversions within the first month alone.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                    <div class="faq-question px-8 py-6 hover:bg-gray-50 transition-colors duration-300 flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            Will the AI chatbot work for my specific type of business?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Absolutely. Our AI is industry-agnostic and has been successfully deployed across real estate, home services, fitness, dental, legal services, automotive, retail, and many other industries. We customize the chatbot for your specific business needs, industry terminology, and sales process. During onboarding, we work with you to train the AI on your unique value proposition, pricing, services, and customer pain points. The more specific information you provide, the better the AI performs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                    <div class="faq-question px-8 py-6 hover:bg-gray-50 transition-colors duration-300 flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            How does the AI handle complex customer questions?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our AI is trained on advanced language models that understand context and nuance. For most common questions, the AI provides immediate, accurate answers. For more complex or unusual questions that fall outside its training, the system intelligently escalates to your team with full context about the conversation. This hybrid approach ensures customers always get help while your team focuses on high-value interactions that require human expertise. You maintain full control over escalation rules and thresholds.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                    <div class="faq-question px-8 py-6 hover:bg-gray-50 transition-colors duration-300 flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            What about data privacy and security?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Security is our top priority. All data is encrypted in transit and at rest using industry-standard protocols. We're GDPR compliant and follow all relevant data protection regulations. Your customer data is never used to train our AI models or shared with third parties. We undergo regular security audits and penetration testing. You have complete control over your data and can export or delete it at any time. We also provide detailed audit logs so you can track exactly what happens with your information.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                    <div class="faq-question px-8 py-6 hover:bg-gray-50 transition-colors duration-300 flex items-center justify-between">
+                        <h3 class="text-lg font-bold text-gray-900">
+                            What kind of support do you provide?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            We provide comprehensive support to ensure your success. Every client gets a dedicated onboarding specialist who guides you through setup and customization. You'll have access to our support team via email and phone during business hours, with emergency support available 24/7. We also provide regular training sessions, detailed documentation, and a community forum where you can connect with other users. Our goal is to make sure you get maximum value from the platform and achieve your growth targets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold">
+                            AI
+                        </div>
+                        <span class="text-xl font-bold">West Las Vegas AI</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Transforming local businesses with intelligent AI marketing technology.
+                    </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-bold text-white mb-6">Platform</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-bold text-white mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-bold text-white mb-6">Connect</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-6">
+                        Email: <a href="mailto:dandowneyseo@gmail.com" class="text-primary hover:text-white transition-colors duration-300">dandowneyseo@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2025 West Las Vegas AI Marketing. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
